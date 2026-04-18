@@ -1,0 +1,122 @@
+/* Configurações de Cores e Fundo */
+:root {
+  --primary: #646cff;
+  --bg: #242424;
+  --card-bg: #1a1a1a;
+  --text: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  padding: 20px 0;
+  background: #111;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Seção Sobre e Foto Redonda */
+.sobre {
+  padding: 80px 0;
+}
+
+.sobre-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary);
+  box-shadow: 0 0 20px rgba(100, 108, 255, 0.3);
+}
+
+.sobre-texto {
+  max-width: 600px;
+}
+
+/* Projetos */
+.projetos {
+  padding: 60px 0;
+  background: #1a1a1a;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.projeto-card {
+  background: #242424;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  transition: transform 0.3s;
+}
+
+.projeto-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+}
+
+/* Estilo da Imagem do Projeto */
+.projeto-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.redes {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Responsividade: No PC a foto fica ao lado do texto */
+@media (min-width: 768px) {
+  .sobre-content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
